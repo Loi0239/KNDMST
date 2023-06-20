@@ -1,0 +1,735 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;900&display=swap');* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --gray: rgb(34, 48, 64);
+    --white: rgb(253, 251, 252);
+    --green: rgb(8, 215, 108);
+    --blue: rgb(8, 122, 253);
+}
+
+/* common */
+.text-white{
+    color: white;
+}
+
+.text-black{
+    color: black;
+}
+
+.padding-text{
+    padding: 0 20px;
+}
+
+body{
+    background-color: black;
+}
+
+/* header */
+header{
+    background: #000 top center / cover no-repeat;
+    background-size: 100% 300px;
+    background-position: 0 -160px;
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 0 7px #fff;
+    height: 70px;
+    position: fixed ;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.brand_name{
+    position: relative;
+    left: 1%;
+    top: 20px;
+    color: var(--white);
+}
+.first_name{
+    font: lighter 2rem Helvetica;
+    color: var(--green);
+}
+.last_name{
+    font: bolder 2rem Helvetica;
+    color: var(--blue);
+    animation: changecolor 1.3s linear;
+}
+@keyframes changecolor{
+    0% {color: var(--red);}
+    50%{color: var(--green);}
+    100%{color: var(--blue);}
+}
+/* Nav */
+.heading-nav{
+    position: relative;
+    top: -55px;
+    display: inline-block;
+    margin-left: 30%;
+}
+
+#home{
+    color: dodgerblue;
+    background-color: #e6e6e6;
+    border-radius: 25px;
+}
+
+.nav{
+    font-size: 20px;
+    font-weight: 800px;
+}
+
+.nav  li{
+    position: relative;
+    display: inline-block;
+}
+
+.nav > li > a{
+    text-decoration: none;
+    margin: 0 15px; 
+    padding: 10px 15px;
+    transition: 0.5s;
+}
+
+.subnav{
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    border-radius: 3%;
+    background-color: white;
+    font-size: 14px;
+    min-width: 170px;
+    box-shadow: 0px 0px 25px #ccc;
+    display: none;
+}
+
+.subnav li{
+    padding: 20px 10px;
+    display: block;
+}
+
+.subnav li a{
+    text-decoration: none;
+}
+
+.nav li:hover .subnav{
+    display: block;
+    animation: subnav_down 0.5s;
+}
+
+@keyframes subnav_down{
+    0%{
+        opacity: 0;
+        top: 10px;
+        height: 0px;
+    }
+    100%{
+        opacity: 1;
+        top: 25px;
+        height: 170px;
+    }
+}
+
+.subnav li:hover a{
+    color: rgba(31, 107, 248, 0.69);
+}
+
+.nav > li:hover > a{    
+    color: var(--blue);
+    border-radius: 25px;
+    background-color: #e6e6e6;
+    box-shadow: 0 0 10px #fff;
+    transition: 0.6s;
+}
+
+.line{
+    background-color:grey;
+    height: 3px;
+}
+
+/* button */
+.heading-button{
+    position: relative;
+    top: -50%;
+    left: 7%;
+    display: inline-block;
+    font: bolder 2rem Helvetica;
+}
+
+.heading-button a{
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 25px;
+    color: var(--white);
+    font-size: 17px;
+    padding: 15px 15px;
+    margin-top: 10px;
+    display: block;
+    width: 180px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.login:hover{
+    letter-spacing: 3px;
+    background-color: #e6e6e6;
+    box-shadow: 0 0 10px #fff;
+    color: rgba(31, 107, 248, 0.69);
+    transition-delay: 0.2s;
+}
+
+/* center */
+center{
+    position: relative;
+    top: 70px;
+}
+
+.heading {
+    font-size: 40px;
+    animation: flicker 1.5s forwards alternate;
+    color:white;
+    -webkit-animation: blink-1 4s infinite both;
+    font-family: 'Cinzel', serif;
+}
+
+td {
+    text-align: center;
+    width: 5vw; /* Pixel (px) = (Viewport width unit (vw) * Viewport width) / 100 */
+    border: 1px solid white;
+    color: white;
+    size: 12px;
+    font-weight: 700;
+}
+
+.none {
+
+    border: none;
+}
+
+.color1 {
+    background-color: #00b6bc;
+}
+
+.color2 {
+    background-color: #1b67c9;
+}
+
+.color3 {
+    background-color: #a1669f;
+}
+
+.color4 {
+    background-color: #004e75;
+}
+
+.color5 {
+    background-color: #f53951;
+}
+
+.color6 {
+    background-color: #f5b659;
+}
+
+.color7 {
+    background-color: #f36d4a;
+}
+
+.color8 {
+    background-color: #59cf6e;
+}
+
+.color9 {
+    background-color: #329090;
+}
+
+.color10{
+    background-color: #562d56;
+}
+
+.color11{
+    background-color: #859998;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+    0%, 17%, 33%, 50%, 66%, 83%, 100% {
+  
+        text-shadow:
+        0 0 5px #fff,
+        0 0 10px #0fa,
+        0 0 20px #0fa,
+        0 0 40px #0fa,
+        0 0 70px #0fa,
+        0 0 110px #0fa,
+        0 0 160px #0fa
+    }
+    
+    20%, 40%, 60%, 80% {        
+        text-shadow: none;
+    }    
+}
+td {
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+td:hover {
+    transform: scale(1.6);
+    z-index: 1;
+}
+.none:hover{
+    transform: scale(1);
+    z-index: 0;
+    opacity: 1;
+}
+
+/* CHU THICH CHO BANG TUAN HOAN */
+.comment-table{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 165px;
+    border-top: 1px solid #fff;
+    box-shadow: 0 0 8px #fff;
+}
+
+.comment-table table{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    margin: auto;
+    cursor: default;
+}
+
+.comment-table table td{
+    border: none;
+    cursor: default;
+}
+
+.comment-table table .none{
+    cursor: default;
+    width: 6%;
+}
+
+.comment-table table td:nth-child(1),
+.comment-table table td:nth-child(3),
+.comment-table table td:nth-child(5),
+.comment-table table td:nth-child(7){
+    width: 15%;
+    text-align: left;
+}
+
+/* .comment-table table td:nth-child(1):active,
+.comment-table table td:nth-child(3):active, 
+.comment-table table td:nth-child(4):active,
+.comment-table table td:nth-child(7):active{
+    text-decoration: underline;
+} */
+
+.comment-table table td:hover{
+    transform: scale(1);
+}
+
+.dot {
+    position: relative;
+    top: 3px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-right: 5px;
+    display: inline-block;
+  } 
+  span{
+    color: white;
+    font-size: 15px;
+  }
+  
+ 
+/* ----------------------------------------------
+ * Generated by Animista on 2023-5-29 12:55:28
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation blink-1
+ * ----------------------------------------
+ */
+ @-webkit-keyframes blink-1 {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+  @keyframes blink-1 {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+
+/* Hiden */
+#hiden{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+#hiden .box-hiden{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0, 182, 188, 0.8); 
+    color: #fff;
+    display: none;
+}
+
+#hiden .atomic-number,
+#hiden .atomic-mass,
+#hiden .name-chemical,
+#hiden .electronegativity,
+#hiden .electron-configuration,
+#hiden .oxidation-number{
+    padding: 10px 0;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#hiden .atomic-number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 15%;
+    padding-right: 30%;
+}
+
+#hiden .atomic-mass{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 15%;
+}
+
+#hiden .chemical-symbol{
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 50%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    font-weight: 900;
+    text-align: center;
+}
+
+#hiden .name-chemical{
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 50%;
+    height: 20%;
+}
+
+#hiden .electronegativity{
+    position: absolute;
+    top: 15%;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    padding: 20% 0;
+}
+
+#hiden .electron-configuration{
+    position: absolute;
+    top: 65%;
+    left: 0;
+    width: 100%;
+    height: 20%;
+}
+
+#hiden .oxidation-number{
+    position: absolute;
+    top: 85%;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: #fff;
+    color: #000;
+}
+
+.hovered.atomic-number,
+.hovered.atomic-mass,
+.hovered.chemical-symbol,
+.hovered.name-chemical,
+.hovered.electronegativity,
+.hovered.electron-configuration{
+    border: 2px solid #fff;
+}
+
+.opacity.oxidation-number{
+    border: 2px solid #000
+}
+
+
+/* hiden > line */
+#hiden .line{
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    background-color: #fff;
+    opacity: 0;
+}
+
+#hiden .line-1{
+    top: 7%;
+    left: -70%;
+    animation: showline-left .5s ease forwards;
+}
+
+#hiden .line-2{
+    top: 30%;
+    left: -70%;
+    animation: showline-left .5s .5s ease forwards;
+}
+
+#hiden .line-3{
+    top: 52%;
+    left: -70%;
+    animation: showline-left .5s 1s ease forwards;
+}
+
+#hiden .line-4{
+    top: 74%;
+    left: -70%;
+    animation: showline-left .5s 1.5s ease forwards;
+}
+
+#hiden .line-5{
+    top: 7%;
+    right: -70%;
+    animation: showline-right .5s ease forwards;
+}
+
+#hiden .line-6{
+    top: 40%;
+    right: -70%;
+    animation: showline-right .5s 1s ease forwards;
+}
+
+#hiden .line-7{
+    top: 91%;
+    right: -70%;
+    animation: showline-right .5s 2s ease forwards;
+}
+
+@keyframes showline-left{
+    from{
+        opacity: 1;
+        left: 0;
+        width: 0;
+    }
+    to{
+        opacity: 1;
+        width: 70%;
+    }
+}
+
+@keyframes showline-right{
+    from{
+        opacity: 1;
+        right: 0;
+        width: 0;
+    }
+    to{
+        opacity: 1;
+        width: 70%;
+    }
+}
+/* hiden > box-hiden-child */
+#hiden .box-hiden-child{
+    position: absolute;
+    width: 60%;
+    height: 15%;
+    padding: 4%;
+    text-align: center;
+    opacity: 0;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+#hiden .box-hiden-child.color1{
+    background-color: rgba(0, 182, 188, 0.4);
+    border: 1px solid #00b6bc;
+    box-shadow: 0 0 5px #00b6bc;
+}
+
+#hiden .box-hiden-child.color2{
+    background-color: rgba(27, 103, 201, 0.4);
+    border: 1px solid #1b67c9;
+    box-shadow: 0 0 5px #1b67c9;
+}
+
+#hiden .box-hiden-child.color3{
+    background-color: rgba(161, 102, 159, 0.4);
+    border: 1px solid #a1669f;
+    box-shadow: 0 0 5px #a1669f;
+}
+
+#hiden .box-hiden-child.color4{
+    background-color: rgba(0, 78, 117, 0.4);
+    border: 1px solid #004e75;
+    box-shadow: 0 0 5px #004e75;
+}
+
+#hiden .box-hiden-child.color5{
+    background-color: rgba(245, 57, 81, 0.4);
+    border: 1px solid #f53951;
+    box-shadow: 0 0 5px #f53951;
+}
+
+#hiden .box-hiden-child.color6{
+    background-color: rgba(245, 182, 89, 0.4);
+    border: 1px solid #f5b659;
+    box-shadow: 0 0 5px #f5b659;
+}
+
+#hiden .box-hiden-child.color7{
+    background-color: rgba(243, 109, 74, 0.4);
+    border: 1px solid #f36d4a;
+    box-shadow: 0 0 5px #f36d4a;
+}
+
+#hiden .box-hiden-child.color8{
+    background-color: rgba(89, 207, 110, 0.4);
+    border: 1px solid #59cf6e;
+    box-shadow: 0 0 5px #59cf6e;
+}
+
+#hiden .box-hiden-child.color9{
+    background-color: rgba(50, 144, 144, 0.4);
+    border: 1px solid #329090;
+    box-shadow: 0 0 5px #329090;
+}
+
+#hiden .box-hiden-child.color10{
+    background-color: rgba(86, 45, 86, 0.4);
+    border: 1px solid #562d56;
+    box-shadow: 0 0 5px #562d56;
+}
+
+#hiden .box-hiden-child.color11{
+    background-color: rgba(133, 153, 152, 0.4);
+    bor859998der: 1px solid #859998;
+    box-shadow: 0 0 5px #859998;
+}
+
+#hiden .box-1{
+    top: 0;
+    left: -130%;
+    animation: slipbox-left .5s .5s ease forwards;
+}
+
+#hiden .box-2{
+    top: 23%;
+    left: -130%;
+    animation: slipbox-left .5s 1s ease forwards;
+}
+
+#hiden .box-3{
+    top: 45%;
+    left: -130%;
+    animation: slipbox-left .5s 1.5s ease forwards;
+}
+
+#hiden .box-4{
+    top: 67%;
+    left: -130%;
+    padding: 1% 4%;
+    animation: slipbox-left .5s 2s ease forwards;
+}
+
+#hiden .box-5{
+    top: 0%;
+    left: 170%;
+    animation: slipbox-right .5s .5s ease forwards;
+}
+
+#hiden .box-6{
+    top: 33%;
+    left: 170%;
+    animation: slipbox-right .5s 1.5s ease forwards;
+}
+
+#hiden .box-7{
+    top: 84%;
+    left: 170%;
+    animation: slipbox-right .5s 2s ease forwards;
+}
+
+@keyframes slipbox-left{
+    from{
+        opacity: 0;
+        left: -180%;
+    }
+    to{
+        opacity: 1;
+        left: -130%;
+    }
+}
+
+@keyframes slipbox-right{
+    from{
+        opacity: 0;
+        left: 230%;
+    }
+    to{
+        opacity: 1;
+        left: 170%;
+    }
+}
+
+#hiden .box-1:hover,
+#hiden .box-2:hover,
+#hiden .box-3:hover,
+#hiden .box-4:hover{
+    transform: scale(1.1) translateX(-5%);
+}
+
+#hiden .box-5:hover,
+#hiden .box-6:hover,
+#hiden .box-7:hover{
+    transform: scale(1.1) translateX(5%);
+}
+  

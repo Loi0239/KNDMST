@@ -1,0 +1,184 @@
+.water{
+    position: absolute;
+    background-color: rgba(0, 255, 255, 0.3);
+    width: 0;
+    height: 0;
+    z-index: -1;
+    animation: transform .5s linear forwards;
+}
+
+@keyframes transform{
+    0%{
+        top: 0;
+        width: 10%;
+        height: 100px;
+    }
+
+    100%{
+        top: 50%;
+        width: 100%;
+        height: 150px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+}
+
+.sodium{
+    position: absolute;
+    background: url(../img/Sodiumno-backgound.png) top center / cover no-repeat;
+    height: 50px;
+    width: 75px;
+    animation: dropSodium .5s linear forwards;
+}
+
+@keyframes dropSodium{
+    0%{
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    100%{
+        top: 83%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.water-sodium{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background: url(../img/Sodiumno-backgound.png) no-repeat;
+    background-size: 75px 50px;
+    background-position: bottom center;
+    animation: zoom 10s ease-in-out forwards;
+}
+
+@keyframes zoom{
+    0%{
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    25%{
+        bottom: 15%;
+        left: 50%;
+        transform: translateX(-80%);
+        background-size: 60px 40px;
+        background-color: url(../img/StartBoom.png);
+    }
+
+    50%{
+        bottom: 25%;
+        left: 50%;
+        transform: translateX(-20%);
+        background-size: 40px 25px;
+    }
+
+    75%{
+        bottom: 38%;
+        left: 50%;
+        transform: translateX(-65%);
+        background-size: 20px 17px;
+    }
+
+    100%{
+        bottom: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-size: 0px 0px;
+    }
+}   
+
+.copper{
+    position: absolute;
+    bottom: 0;
+    width: 70%;
+    height: 250px;
+    margin: auto;
+    background-color: brown;
+    animation: dropCopper 1s ease-in-out forwards;
+}
+
+@keyframes dropCopper{
+    0%{
+        top: -120%;
+        left: 20%;
+        transform: translateX(-50%);
+        transform: skewY(5deg);
+    }
+
+    100%{
+        top: 15%;
+        left: 20%;
+        transform: translateX(-50%);
+        transform: skewY(5deg);
+    }
+}
+
+.acidSulfuric{
+    position: absolute;
+    background-color: rgba(0, 255, 255, 0.3);
+    width: 0;
+    height: 0;
+    z-index: 1;
+    animation: transform .5s linear forwards;
+}
+
+.copperOxide{
+    position: absolute;
+    background-color: #060e2f;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    height: 10%;
+    animation: dropCopperOxide .5s linear forwards;
+}
+
+@keyframes dropCopperOxide{
+    0%{
+        top: 0;
+        left: 50%;
+        width: 0;
+    }
+
+    100%{
+        top: 90%;
+        left: 0;
+        width: 100%;
+    }
+}
+
+.copperOxide-acidSulfuric{
+    position: absolute;
+    background-color: #060e2f;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    height: 10%;
+    z-index: 1;
+    animation: copperOxide-acidSulfuric 7s linear forwards;
+}
+
+@keyframes copperOxide-acidSulfuric{
+    0%{
+        top: 90%;
+        width: 100%;
+        clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    }
+    10%{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    50% {
+        background-color: #122984;
+        width: 100%;
+        top: 50%;
+        height: 50%;
+    }
+    100%{
+        clip-path: none;
+        background-color: rgba(0, 98, 255, 0.5);
+        width: 100%;
+        top: 50%;
+        height: 50%;
+    }
+}

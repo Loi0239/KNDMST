@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #000;
+}
+
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background-color: #000;
+    box-shadow: 0 0 50px #0ef;
+    border-radius: 20px;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.bubbles{
+    position: absolute;
+    top: -280px;
+    left: -40px;
+    width: 100%;
+    height: 100%;
+    transform: translateX(10px);
+    z-index: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bubble{
+    width: 0.35rem;
+    height: 0.35rem;
+    background-color: #0ef;
+    border-radius: 50%;
+    transform: translate(25px, 20px);
+    animation: chemical_bubbles 2s linear infinite;
+}
+
+@keyframes chemical_bubbles {
+    0%{
+        transform: translate(35px, 500px) scale(1);
+        opacity: 1;
+    }
+}
+
+.bubble:nth-child(1){ 
+    width: 0.8rem;
+    height: 0.8rem;
+    animation-delay: 1.4s;
+}
+.bubble:nth-child(2){
+    width: 1rem;
+    height: 1rem;
+    animation-delay: 3.8s;
+}
+
+.bubble:nth-child(3){
+    width: 1.2rem;
+    height: 1.2rem;
+    animation-delay: 3s;
+}
+.bubble:nth-child(4){
+    animation-delay: 2.2s;
+}
+
+.wrapper:hover{
+    box-shadow: 0 0 50px #0e8;
+    animation: animate 6s linear infinite;
+}
+
+/* @keyframes animate{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+} */
+
+.form-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inset: 4px;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    transition: 1s ease-in-out;
+}
+
+.wrapper.active .form-wrapper.sign-in{
+    transform: translateY(-450px);
+}
+
+
+.wrapper .form-wrapper.sign-up{
+    position: absolute;
+    top: 472px;
+    left: 0;
+}
+
+.wrapper.active .form-wrapper.sign-up{
+    transform: translateY(-450px);
+}
+
+h2{
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.input-group{
+    position: relative;
+    margin: 15px 0;
+    border-bottom: 2px solid #fff;
+}
+
+.input-group label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-group input{
+    width: 320px;
+    height: 40px;
+    font-size: 14px;
+    color: #fff;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label{
+    top: -5px;
+}
+
+.remember{
+    margin: -5px 0 15px 0;
+}
+
+.remember label{
+    color: #fff;
+    font-size: 14px;
+}
+
+.remember label input{
+    accent-color: #0ef;
+}
+
+button{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 20px;
+    color: #000;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    transition: .5s;
+}
+
+button:hover{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.backbtn{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 60px;
+    padding: 10px 20px;
+    color: #000;
+    background-color: aqua;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.backbtn:hover{
+    padding: 7.6px 20px;
+    padding: 6.7px 20px;
+    font-size: 25px;
+    font-weight: 800;
+    box-shadow: 0 0 12px #fff;
+}
+
+.signUp-link{
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.signUp-link{
+    color: #fff;
+}
+
+.signUp-link p a{
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signUp-link p a:hover{
+    text-decoration: underline;
+}
+

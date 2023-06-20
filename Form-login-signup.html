@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In/Up</title>
+    <link rel="shortcut icon" href="./assets/img/logo-web.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/login-signup.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
+        <div class="form-wrapper sign-in" >
+            <form action="">
+                <h2>LOGIN</h2>
+                <div class="input-group">
+                    <input type="text" name="" id="" required>
+                    <label for="">UserName</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="" id="" required>
+                    <label for="">Password</label>
+                </div>
+                <div class="remember">
+                    <label for="">
+                        <input type="checkbox" name="" id=""> Remember me
+                    </label>
+                </div>
+                <button type="submit">Login</button>
+                <div class="signUp-link">
+                    <p>Don't have an account ? <a href="#" class="signUpbtn-link">Sign Up</a></p>
+                </div>
+                <a class="backbtn" href="./index.html">Back Home</a>
+            </form>
+        </div>
+
+        <div class="form-wrapper sign-up" >
+            <form action="">
+                <h2>SIGN UP</h2>
+                <div class="input-group">
+                    <input type="email" name="" id="" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="" id="" required>
+                    <label for="">UserName</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="" id="" required>
+                    <label for="">Password</label>
+                </div>
+                <div class="input-group">
+                    <input type="again-password" name="" id="" required>
+                    <label for="">Password again</label>
+                </div>
+                <div class="remember">
+                    <label for="">
+                        <input type="checkbox" name="" id="">
+                        I agree to the terms & condition
+                    </label>
+                </div>
+                <button type="submit">Sign Up</button>
+                <div class="signUp-link">
+                    <p>Alreadly have an account ? <a href="#" class="signInbtn-link">Login</a></p>
+                </div>
+                <a class="backbtn" href="./index.html">Back Home</a>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const signInBtnLink = document.querySelector('.signInbtn-link');
+        const signUpBtnLink = document.querySelector('.signUpbtn-link');
+        const wrapper = document.querySelector('.wrapper');
+
+        signUpBtnLink.addEventListener('click', () => {
+            wrapper.classList.toggle('active');
+        });
+
+        signInBtnLink.addEventListener('click', () => {
+            wrapper.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
